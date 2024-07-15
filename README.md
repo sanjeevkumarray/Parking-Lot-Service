@@ -22,39 +22,20 @@ parking-lot-service/
 └── .env
 
 
-Features
-Vehicle Types & Parking Slots:
 
-Motorcycles/scooters, Cars/SUVs, Buses/Trucks with varying slot sizes per parking lot.
-Real-time Slot Tracking:
+## Features
 
-Ability to check free slots dynamically.
-Ticket Generation:
+- Supports Motorcycles/scooters, Cars/SUVs, Buses/Trucks with varying slot sizes.
+- Real-time slot tracking.
+- Generates entry tickets and receipts.
+- Different tariff models per parking lot.
 
-Generate entry tickets with vehicle and parking lot details.
-Receipt Generation:
+## Setup
 
-Create receipts upon vehicle unparking, calculating fees based on parking duration and tariff.
-Tariff Models
-Parking Lot A
-Motorcycles/scooters: Rs 5/hr
-Cars/SUVs: Rs 20.50/hr
-Buses/Trucks: Rs 50/hr up to 1 day, then Rs 500/day
-Parking Lot B
-Motorcycles/scooters: Rs 10.50/hr
-Cars/SUVs: Rs 50 for the 1st hour, then Rs 25/hr
-Buses/Trucks: Rs 100/hr
-Development Setup
-Prerequisites
-Go 1.18+
-PostgreSQL
-Docker (optional
-
-Installation
-Clone the repository:
-
-git clone https://github.com/yourusername/parking-lot-service.git
-cd parking-lot-service
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/parking-lot-service.git
+   cd parking-lot-service
 
 Set up environment variables:
 # Example .env file
@@ -76,19 +57,14 @@ Build and run using Docker
 docker-compose up --build
 
 API Endpoints
-POST /parking-lots: Create a new parking lot.
-POST /vehicles/park: Park a vehicle.
-POST /vehicles/unpark/:id: Unpark a vehicle.
-GET /parking-lots/:id/free-slots: Get free slots in a parking lot.
+ -POST /parking-lots: Create a new parking lot.
+ -POST /vehicles/park: Park a vehicle.
+-POST /vehicles/unpark/:id: Unpark a vehicle.
+-GET /parking-lots/:id/free-slots: Get free slots in a parking lot.
+
+
 Contributing
 Contributions are welcome! Please fork the repository and create a pull request.
 
-API Endpoints
-POST /parking-lots: Create a new parking lot.
-POST /vehicles/park: Park a vehicle.
-POST /vehicles/unpark/:id: Unpark a vehicle.
-GET /parking-lots/:id/free-slots: Get free slots in a parking lot.
-Contributing
-Contributions are welcome! Please fork the repository and create a pull request.
 
 This concise README covers all essential aspects of your Parking Lot Service project, including setup instructions, features, development guidelines, and licensing information. Adjust the placeholders (`yourusername`, `myusername`, `mypassword`, `DB_HOST`) according to your project's actual details before publishing.
